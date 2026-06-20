@@ -59,20 +59,30 @@ public class Node {
 
     }
 
-    public  void sort() {
-        if (head != null && head.next != null) {
-            for(Node p1 = head; p1.next != null; p1 = p1.next) {
-                for(Node p2 = p1.next; p2 != null; p2 = p2.next) {
-                    if (p1.num > p2.num) {
-                        int temp = p1.num;
-                        p1.num = p2.num;
-                        p2.num = temp;
-                    }
+    public void Sort() {
+        if (head == null || head.next == null)
+            return;
+
+        boolean swapped = true;
+
+        while(swapped){
+            swapped = false;
+
+            for (Node p = head; p.next != null; p = p.next) {
+                if (p.num > p.next.num) {
+                    swapped = true;
+                    int temp = p.num;
+                    p.num = p.next.num;
+                    p.next.num = temp;
+
                 }
             }
 
         }
     }
+
+
+
 
     public  void delete(int num) {
         Node ptr;

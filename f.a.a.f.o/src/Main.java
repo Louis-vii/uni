@@ -3,6 +3,7 @@ import java.awt.*;
 
 public class Main {
 
+
     public static void main(String[] args){
 
         int height = 500 ;
@@ -14,7 +15,6 @@ public class Main {
         JFrame  frame = new JFrame(" balls ");
         ImageIcon image = new ImageIcon("screenshot-2026-04-24_19-12-25.png");
         JLabel label  = new JLabel();
-
 
 
         label.setText("huge balls");
